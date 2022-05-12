@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?apikey=a100bdc8-0123-487c-a784-3b11a0f1c7b2&amp;lang=ru_RU"></script>
+	</head>
+	
+	<body>
+		<svg style="display: none">
+			<symbol id="phone" viewBox="0 0 14.613 14.635">
+				<g id="phone-call" transform="translate(-0.344)">
+					<g id="Group_75" data-name="Group 75" transform="translate(0.344 0)">
+						<path fill="currentColor" id="Path_210" data-name="Path 210" d="M11.9,35.626a1.439,1.439,0,0,0-1.044-.479,1.488,1.488,0,0,0-1.056.476l-.976.973c-.08-.043-.161-.083-.238-.124-.111-.056-.216-.108-.306-.164a10.609,10.609,0,0,1-2.542-2.317A6.259,6.259,0,0,1,4.9,32.676c.253-.232.488-.473.717-.7.086-.086.173-.176.259-.263a1.417,1.417,0,0,0,0-2.138l-.843-.843c-.1-.1-.195-.195-.287-.293-.185-.192-.38-.389-.581-.575a1.462,1.462,0,0,0-1.035-.454,1.513,1.513,0,0,0-1.05.454l-.006.006-1.05,1.059a2.26,2.26,0,0,0-.67,1.436,5.415,5.415,0,0,0,.4,2.292A13.3,13.3,0,0,0,3.116,36.6a14.536,14.536,0,0,0,4.84,3.79,7.542,7.542,0,0,0,2.718.8c.065,0,.133.006.195.006a2.328,2.328,0,0,0,1.782-.766c0-.006.009-.009.012-.015a7.022,7.022,0,0,1,.541-.559c.133-.127.269-.259.4-.4a1.541,1.541,0,0,0,.466-1.069,1.484,1.484,0,0,0-.476-1.059Zm1.106,3.253s0,0,0,0c-.12.13-.244.247-.377.377a8.122,8.122,0,0,0-.6.618,1.489,1.489,0,0,1-1.161.491c-.046,0-.1,0-.142,0a6.7,6.7,0,0,1-2.409-.723,13.721,13.721,0,0,1-4.559-3.571,12.54,12.54,0,0,1-2.224-3.7,4.41,4.41,0,0,1-.346-1.934,1.418,1.418,0,0,1,.426-.917l1.053-1.053a.7.7,0,0,1,.47-.219.661.661,0,0,1,.451.216l.009.009c.188.176.368.358.556.553.1.1.195.2.293.3l.843.843a.59.59,0,0,1,0,.958c-.09.09-.176.179-.266.266-.259.266-.507.513-.775.754-.006.006-.012.009-.015.015a.63.63,0,0,0-.161.7l.009.028a6.77,6.77,0,0,0,1,1.628l0,0a11.337,11.337,0,0,0,2.743,2.5,4.216,4.216,0,0,0,.38.207c.111.056.216.108.306.164.012.006.025.015.037.022a.67.67,0,0,0,.306.077.66.66,0,0,0,.47-.213l1.056-1.056a.7.7,0,0,1,.466-.232.629.629,0,0,1,.445.225l.006.006,1.7,1.7A.611.611,0,0,1,13.006,38.878Z" transform="translate(-0.344 -26.559)"/>
+						<path fill="currentColor" id="Path_211" data-name="Path 211" d="M245.287,86.752a3.975,3.975,0,0,1,3.237,3.237.414.414,0,0,0,.411.346.551.551,0,0,0,.071-.006.417.417,0,0,0,.343-.482,4.807,4.807,0,0,0-3.917-3.917.419.419,0,0,0-.482.34A.412.412,0,0,0,245.287,86.752Z" transform="translate(-237.388 -83.271)"/>
+						<path fill="currentColor" id="Path_212" data-name="Path 212" d="M255.709,6.456a7.915,7.915,0,0,0-6.45-6.45.416.416,0,1,0-.136.822,7.07,7.07,0,0,1,5.764,5.764.414.414,0,0,0,.411.346.551.551,0,0,0,.071-.006A.409.409,0,0,0,255.709,6.456Z" transform="translate(-241.102 0)"/>
+					</g>
+				</g>
+			</symbol>
+
+			<svg><use xlink:href="#shop"></use></svg>
+		</svg>
+
+		<div class="wrapper">
+			<header class="header header-inner">
+				<div class="container">
+					<div class="header-row">
+						<div class="header-logo">
+							<a href="https://unifloors.ru">
+								<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/logo.svg" data-src="images/svg/logo.svg" alt="Unifloors" data-loaded="true" width="162" height="40">
+							</a>
+						</div>
+						<div class="header-social">
+							<a class="header-social-link" href="https://instagram.com/unifloors.ru" target="_blank">
+								<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/instagram.svg" data-src="images/svg/instagram.svg" alt="Instagram" data-loaded="true">
+							</a>
+							<a class="header-social-link" href="https://vk.com/unifloorsparket" target="_blank">
+								<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/vk.svg" data-src="images/svg/vk.svg" alt="ВКонтакте" data-loaded="true">
+							</a>
+							<a class="header-social-link" href="https://t.me/unifloorsparquet" target="_blank">
+								<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/telegram.svg" data-src="images/svg/telegram.svg" alt="Telegram" data-loaded="true">
+							</a>
+						</div>
+						<div class="header-contact">
+							<div class="header-contact-item">
+								<a href="tel:+74951913320">+7 (495) 191-33-20</a>Москва
+							</div>
+							<div class="header-contact-item">
+								<a href="tel:+78125018415">+7 (812) 501-84-15</a>Санкт-Петербург
+							</div>
+						</div>
+						<div class="header-callback">
+							<a class="button is-border" href="" data-toggle="modal" data-target="#callback">Обратный звонок</a>
+						</div>
+						<div class="header-burger">
+							<svg width="24" height="11"> <use xlink:href="images/svg/sprites.svg#burger"></use> </svg>
+						</div>
+					</div>
+					<nav class="menu-glavnoe-menyu-container">
+						<ul id="primary-menu" class="header-menu">
+							<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60">
+								<a href="https://unifloors.ru/products/">Продукция</a>
+							</li>
+							<li id="menu-item-2334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2334">
+								<a href="https://unifloors.ru/akczii/">Акции</a>
+							</li>
+							<li id="menu-item-40" class="menu-item menu-item-type-post_type_archive menu-item-object-services menu-item-40">
+								<a href="https://unifloors.ru/services/">Услуги</a>
+							</li>
+							<li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-52 current_page_item menu-item-54">
+								<a href="https://unifloors.ru/color_selection/" aria-current="page">Выбор цвета</a>
+							</li>
+							<li id="menu-item-2452" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2452">
+								<a href="https://unifloors.ru/new-dizayn/">Дизайнерам</a>
+							</li>
+							<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17">
+								<a href="https://unifloors.ru/about/">О нас</a>
+							</li>
+							<li id="menu-item-165" class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-165">
+								<a href="https://unifloors.ru/blog/">Блог</a>
+							</li>
+							<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+								<a href="https://unifloors.ru/contacts/">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<nav class="nav">
+				<div class="nav-head">
+					<div class="nav-contact">
+						<div class="nav-contact-item">
+							<a href="tel:+74959663920">+7 (495) 966-39-20</a>Москва
+						</div>
+						<div class="nav-contact-item">
+							<a href="tel:+78125018415">+7 (812) 501-84-15</a>Санкт-Петербург
+						</div>
+					</div>
+					<div class="nav-close">
+						<svg><use xlink:href="images/svg/sprites.svg#close"></use></svg>
+					</div>
+				</div>
+				<div class="nav-body">
+					<ul id="primary-menu" class="nav-menu">
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60">
+							<a href="https://unifloors.ru/products/">Продукция</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2334">
+							<a href="https://unifloors.ru/akczii/">Акции</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type_archive menu-item-object-services menu-item-40">
+							<a href="https://unifloors.ru/services/">Услуги</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-52 current_page_item menu-item-54">
+							<a href="https://unifloors.ru/color_selection/" aria-current="page">Выбор цвета</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2452">
+							<a href="https://unifloors.ru/new-dizayn/">Дизайнерам</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17">
+							<a href="https://unifloors.ru/about/">О нас</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type_archive menu-item-object-blog menu-item-165">
+							<a href="https://unifloors.ru/blog/">Блог</a>
+						</li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
+							<a href="https://unifloors.ru/contacts/">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav-foot">
+					<div class="nav-social">
+						<a class="nav-social-link" href="https://instagram.com/unifloors.ru" target="_blank">
+							<img class="image js-lazy" loading="lazy" draggable="false" src="images/svg/instagram.svg" data-src="images/svg/instagram.svg" alt="Instagram">
+						</a>
+						<a class="nav-social-link" href="https://vk.com/unifloorsparket" target="_blank"> <img class="image js-lazy" loading="lazy" draggable="false" src="images/svg/vk.svg" data-src="images/svg/vk.svg" alt="ВКонтакте">
+						</a>
+						<a class="nav-social-link" href="https://t.me/unifloorsparquet" target="_blank"> <img class="image js-lazy" loading="lazy" draggable="false" src="images/svg/telegram.svg" data-src="images/svg/telegram.svg" alt="Telegram">
+						</a>
+					</div>
+				</div>
+			</nav>
+
+			<div class="contentM">
+				<nav aria-label="breadcrumb">
+					<div class="container">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Каталог</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Какой-то там паркет</li>
+						</ol>
+					</div>
+				</nav>
+
+				<div class="cart-product">
+					<div class="container">
+						<div class="cart-product__inner">
+							<div class="cart-product__mob">
+								<div class="cart-product__mob-title">Название паркета в одну или две строки</div>
+								<div class="cart-product__text-min">Инженерная доска</div>
+							</div>
+							<div class="cart-product__img" style="background-image: url('images/img.jpg')"></div>
+
+							<div class="cart-product__text">
+								<h1>Название паркета в одну или две строки</h1>
+								<div class="cart-product__text-min">Инженерная доска</div>
+								<div class="cart-product__text-dop">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. </div>
+								<div class="cart-product__colors">
+									<div class="cart-product__colors-item">
+										<span class="color" style="background: #9F6838;"></span>
+										Коричневый
+									</div>
+									<div class="cart-product__colors-item">
+										<span class="color" style="background: #D79E5C;"></span>
+										Светлый
+									</div>
+									<div class="cart-product__colors-item">
+										<span class="color" style="background: #B1B1B1;"></span>
+										Серый
+									</div>
+								</div>
+								<div class="cart-product__descrip">
+									<div class="cart-product__descrip-item">Длина: <span>500-2000 мм</span></div>
+									<div class="cart-product__descrip-item">Толщина: <span>15 мм</span></div>
+									<div class="cart-product__descrip-item">Соотношение длин в упаковке: <span>500-700 мм - 30%  |  900-2000 мм - 70%</span></div>
+								</div>
+								<div class="cart-product__sel">
+									<div class="cart-product__sel-item">
+										<div class="cart-product__sel-top">
+											<div class="cart-product__sel-title">Выбрать селекцию</div>
+											<a href="#" class="cart-product__sel-link">О селекции</a>
+										</div>
+
+										<div class="cart-product__sel-select">
+											<select class="js-select">
+												<option value="1">Премиум</option>
+												<option value="2">Премиум 2</option>
+												<option value="3">Премиум 3</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="cart-product__sel-item">
+										<div class="cart-product__sel-top">
+											<div class="cart-product__sel-title">Размер</div>
+										</div>
+
+										<div class="cart-product__sel-select">
+											<select class="js-select">
+												<option value="1">90*60*90</option>
+												<option value="2">90*60*90 2</option>
+												<option value="3">90*60*90 3</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="cart-product__btns">
+									<a href="#" class="bt bt-black">Рассчитать стоимость</a>
+									<a href="#" class="bt bt-at">зАКАЗАТЬ ОБРАЗЦЫ</a>
+									<a href="#" class="bt bt-bord">сКАЧАТЬ ТЕКСТУРУ</a>
+								</div>
+							</div>
+
+							<div class="cart-product__table">
+								<div class="cart-product__table-tb">
+									<table>
+										<thead>
+										<tr>
+											<th>Ширина, мм</th>
+											<th>Премиум</th>
+											<th>Натур</th>
+											<th>Рустик</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td>500-2000*125*15</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+										</tr>
+										<tr>
+											<td>500-2000*125*15</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+										</tr>
+										<tr>
+											<td>500-2000*125*15</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+										</tr>
+										<tr>
+											<td>500-2000*125*15</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+											<td>5 871 ₽</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="cart-product__tt">
+								<p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях. При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет сделать текст более привлекательным и живым для визуально-слухового восприятия.Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer class="footer">
+				<div class="container">
+					<h3 class="footer-title">
+						<span>Контакты</span>
+					</h3>
+					<div class="footer-contact">
+						<div class="footer-contact-column">
+							<div class="footer-contact-title">г. Москва</div>
+							<ul class="footer-contact-list">
+								<li>
+									<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/phone.svg" data-src="images/svg/phone.svg" alt="" data-loaded="true">
+									<a href="tel:+74959663920">+7 (495) 966-39-20</a>
+								</li>
+								<li>
+									<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/email.svg" data-src="images/svg/email.svg" alt="" data-loaded="true">
+									<a href="mailto:info@unifloors.ru">info@unifloors.ru</a>
+								</li>
+								<li>
+									<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/location.svg" data-src="images/svg/location.svg" alt="" data-loaded="true">
+									<span>г. Москва, ул. Рочдельская, д.15 стр.35</span>
+								</li>
+							</ul>
+							<div class="footer-contact-map js-map js--loaded" data-s="55.756710" data-d="37.562542">
+							</div>
+						</div>
+						<div class="footer-contact-column">
+							<div class="footer-contact-title">г. Санкт-Петербург</div>
+							<ul class="footer-contact-list">
+								<li>
+									<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/phone.svg" data-src="images/svg/phone.svg" alt="" data-loaded="true">
+									<a href="tel:+78125018415">+7 (812) 501-84-15</a>
+								</li>
+								<li>
+									<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/email.svg" data-src="images/svg/email.svg" alt="" data-loaded="true">
+									<a href="mailto:info-spb@unifloors.ru">info-spb@unifloors.ru</a>
+								</li>
+								<li>
+									<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/location.svg" data-src="images/svg/location.svg" alt="" data-loaded="true">
+									<span>г. Санкт-Петербург, ул. Уральская, д.13</span>
+								</li>
+							</ul>
+							<div class="footer-contact-map js-map js--loaded" data-s="59.953164" data-d="30.263011">
+							</div>
+						</div>
+					</div>
+					<div class="footer-social">
+						<div class="footer-social-title"></div>
+						<div class="footer-social-list">
+							<a class="footer-social-list-link" href="https://instagram.com/unifloors.ru" target="_blank">
+								<img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/instagram-lg.svg" data-src="images/svg/instagram-lg.svg" alt="Instagram" data-loaded="true">
+							</a>
+							<a class="footer-social-list-link" href="https://vk.com/unifloorsparket" target="_blank"><img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/vk-lg.svg" data-src="images/svg/vk-lg.svg" alt="ВКонтакте" data-loaded="true"></a>
+							<a class="footer-social-list-link" href="https://t.me/unifloorsparquet" target="_blank"><img class="image js-lazy is-loaded" loading="lazy" draggable="false" src="images/svg/telegram-lg.svg" data-src="images/svg/telegram-lg.svg" alt="Telegram" data-loaded="true"></a>
+						</div>
+				  </div>
+					<ul class="footer-menu">
+						<li>
+							<a href="https://unifloors.ru/styling-options/">Варианты укладки паркета</a>
+						</li>
+						<li>
+							<a href="https://unifloors.ru/materials/">Материалы для инкрустации</a>
+						</li>
+						<li>
+							<a href="https://unifloors.ru/wood-processing/">Виды обработки древесины</a>
+						</li>
+						<li>
+							<a href="https://unifloors.ru/privacy-policy/">Политика конфеденциальности</a>
+						</li>
+					</ul>
+					<div class="footer-copyright">© 2022. Все права защищены.</div>
+				</div>
+			</footer>
+
+		</div>
+		<div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="Callback" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header py-0">
+						<button type="button" class="close colorEFA fs60" data-dismiss="modal" aria-label="Close">
+							<img src="https://unifloors.ru/wp-content/themes/unifloors/img/staticIMG/close.png" style="width: 20px" aria-hidden="true" loading="lazy" decoding="async" alt=""> </button>
+					</div>
+					<div class="modal-body py-0 px-4">
+						<div class="text-center fwb fs32" style="color: #EFA391" id="ApplicationModal">Обратный звонок</div>
+						<div role="form" class="wpcf7" id="wpcf7-f2031-o2" dir="ltr" lang="ru-RU">
+							<div class="screen-reader-response">
+								<p role="status" aria-live="polite" aria-atomic="true"></p>
+								<ul></ul>
+							</div>
+							<form action="/color_selection/#wpcf7-f2031-o2" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+								<div style="display: none;">
+									<input type="hidden" name="_wpcf7" value="2031">
+									<input type="hidden" name="_wpcf7_version" value="5.4">
+									<input type="hidden" name="_wpcf7_locale" value="ru_RU">
+									<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2031-o2">
+									<input type="hidden" name="_wpcf7_container_post" value="0">
+									<input type="hidden" name="_wpcf7_posted_data_hash" value="">
+							  </div>
+								<div class="form-group mt-4">
+									<span class="wpcf7-form-control-wrap text-838">
+										<input type="text" name="text-838" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control form-control-new px-0" aria-required="true" aria-invalid="false" placeholder="Ваше Имя"></span>
+								</div>
+								<div class="form-group">
+									<span class="wpcf7-form-control-wrap tel-276">
+										<input type="tel" name="tel-276" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control form-control-new px-0" aria-required="true" aria-invalid="false" placeholder="Телефон">
+									</span>
+								</div>
+								<div class="form-group" style="margin-bottom: 10px">
+									<input type="hidden" name="_wpcf7_captcha_challenge_captcha-170" value="2209345963">
+									<img class="wpcf7-form-control wpcf7-captchac wpcf7-captcha-captcha-170" alt="captcha" src="https://unifloors.ru/wp-content/uploads/wpcf7_captcha/2209345963.png" aria-invalid="false" width="72" height="24">
+								</div>
+								<div class="form-group">
+									<span class="wpcf7-form-control-wrap captcha-170">
+										<input type="text" name="captcha-170" value="" size="40" class="wpcf7-form-control wpcf7-captchar form-control form-control-new px-0" autocomplete="off" aria-invalid="false" placeholder="Введите код с картинки">
+									</span>
+								</div>
+								<div class="text-center my-4">
+									<input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit p-4 text-center buttonPink" aria-invalid="false">
+									<span class="ajax-loader"></span>
+								</div>
+								<div class="col-12 mt-3 mt-md-0 px-0" style="font-size: 14px; text-align: center;">Нажимая на кнопку "Отправить", вы даете согласие с условиями
+									<a href="https://unifloors.ru/privacy-policy/" target="_blank" style="text-decoration: underline;color: #252525;">политики конфиденциальности</a>
+								</div>
+								<input type="hidden" name="page-title" value="" class="wpcf7-form-control wpcf7-hidden page-title" id="page-title" aria-invalid="false">
+								<br>
+								<div class="wpcf7-response-output" aria-hidden="true"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="js/jquery-3.3.1.js.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+	  <script src="js/popper.js"></script>
+
+		<script src="js/jquery.selectric.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
