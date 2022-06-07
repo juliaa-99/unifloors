@@ -1435,6 +1435,7 @@ h1 {
   .catalog__item-in .bt {
     margin-top: 16px; }
 .catalog__item-img {
+  display: block;
   height: 190px;
   background-repeat: no-repeat;
   background-position: center;
