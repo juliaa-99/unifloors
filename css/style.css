@@ -1432,7 +1432,7 @@ h1 {
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 2;
+  z-index: 10;
   background: #fff;
   border-radius: 100px;
   font-weight: 700;
