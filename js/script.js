@@ -89,7 +89,6 @@ $(document).ready(function (){
     });
 
 
-
     ymaps.ready(init);
     function init () {
         var myMap3 = new ymaps.Map("map", {
@@ -123,7 +122,7 @@ $(document).ready(function (){
     }
 
 
-    $(function(){
+   /* $(function(){
         var speed = 1000,
             $li;
 
@@ -188,7 +187,7 @@ $(document).ready(function (){
                 duration: speed
             }, 'linear');
         }
-    })
+    })*/
 
 
 });

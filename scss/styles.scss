@@ -2515,23 +2515,133 @@ h1 {
 
 
 .catalog__item-slider {
-  margin-bottom: 0!important;
+  height: 318px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+
+  @media screen and(max-width: 991px) {
+    height: 150px;
+  }
+
+
+  &:hover {
+    .catalog__item-slider-dots {
+      &:before {
+        background: rgba(45, 45, 45, 0.15);
+      }
+
+      &:hover {
+        &:before {
+          background: $act3;
+        }
+      }
+    }
+  }
+
+  &-dots {
+    flex: 1 0 0%;
+    padding: 0 2px;
+    height:  318px;
+
+    cursor: pointer;
+
+    position: relative;
+    z-index: 9;
+
+    flex-grow: 1;
+    margin-left: 2px;
+    margin-right: 2px;
+    align-self: stretch;
+    margin-bottom: -12px;
+
+    @media screen and(max-width: 991px) {
+      height: 150px;
+    }
+
+
+    &:before {
+      content: '';
+      width: 95%;
+      height: 2px;
+      display: block;
+
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      z-index: 2;
+
+      background: rgba(45, 45, 45, 0.15);
+    }
+
+    &:first-of-type {
+      & + .catalog__item-img {
+        opacity: 1;
+        z-index: 2;
+      }
+
+      &:before {
+        background: $act3;
+      }
+    }
+
+    &:hover {
+      &:not(:hover) {
+        & + .catalog__item-img {
+          opacity: 0;
+          z-index: 2;
+        }
+
+      }
+
+      & + .catalog__item-img {
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+  }
+
+  .catalog__item-img {
+    height: 318px;
+    width: 100%;
+
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+
+    @media screen and(max-width: 991px) {
+      height: 150px;
+    }
+
+  }
 
   &-item {
 
   }
 
-  .slick {
+  /*.slick {
     &-dots {
       bottom: -10px;
       display: flex;
       align-items: center;
       justify-content: space-between;
 
+      top: 0;
+      left: 0;
+      height: 100%;
 
       li {
+        height: 100%;
         margin: 0;
-        padding: 0 3px;
+        padding: 0;
 
         -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -2539,7 +2649,6 @@ h1 {
         -ms-flex-positive: 1;
         flex-grow: 1;
         max-width: 100%;
-        height: 2px;
 
         &:before {
           content: '';
@@ -2548,7 +2657,7 @@ h1 {
           display: block;
 
           position: absolute;
-          top: 0;
+          bottom: -10px;
           left: 0;
           z-index: 2;
 
@@ -2556,7 +2665,13 @@ h1 {
         }
 
         button {
-          display: none;
+          padding: 0;
+          width: 100%;
+          height: 104%;
+          display: block;
+
+          position: relative;
+          z-index: 8;
         }
 
         &.slick-active {
@@ -2566,7 +2681,7 @@ h1 {
         }
       }
     }
-  }
+  }*/
 }
 
 
