@@ -1952,7 +1952,7 @@ h1 {
       position: absolute;
       top: 20px;
       left: 20px;
-      z-index: 2;
+      z-index: 10;
 
       background: $white;
       border-radius: 100px;
@@ -2684,6 +2684,49 @@ h1 {
   }*/
 }
 
+.catalog__tg {
+  text-align: center;
+  margin: 0 -5px 33px;
+
+  @media screen and(max-width: 991px) {
+    display: flex;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    padding-right: 10px;
+
+    text-align: left;
+    overflow: auto;
+  }
+
+  &-item {
+    padding: 10px;
+    margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
+
+    border: 1px solid rgba(45, 45, 45, 0.15);
+    border-radius: 3px;
+
+    img {
+      margin-right: 10px;
+    }
+
+    &:hover,
+    &.active{
+      border-color: #9F6838;
+    }
+
+    span {
+      display: block;
+
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0.0015em;
+      color: #171C22;
+    }
+  }
+}
 
 
 

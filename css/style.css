@@ -1889,3 +1889,33 @@ h1 {
     @media screen and (max-width: 991px) {
       .catalog__item-slider .catalog__item-img {
         height: 150px; } }
+
+.catalog__tg {
+  text-align: center;
+  margin: 0 -5px 33px; }
+  @media screen and (max-width: 991px) {
+    .catalog__tg {
+      display: flex;
+      white-space: nowrap;
+      margin-bottom: 15px;
+      padding-right: 10px;
+      text-align: left;
+      overflow: auto; } }
+  .catalog__tg-item {
+    padding: 10px;
+    margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(45, 45, 45, 0.15);
+    border-radius: 3px; }
+    .catalog__tg-item img {
+      margin-right: 10px; }
+    .catalog__tg-item:hover, .catalog__tg-item.active {
+      border-color: #9F6838; }
+    .catalog__tg-item span {
+      display: block;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0.0015em;
+      color: #171C22; }
