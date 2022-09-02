@@ -29,6 +29,78 @@ $(document).ready(function (){
         e.preventDefault();
     });
 
+
+    /* validation*/
+
+    var validSrc = '<span></span>';
+    var invalidSrc = "<span></span>";
+
+    $(document).ready(function() {
+        initMasks();
+        initListeners();
+    });
+
+    function initMasks() {
+        $('input[name="phone-number"]').mask("+7 (000) 000-00-00");
+    }
+
+    function initListeners() {
+        $("#phone2").on("blur", validatePhone);
+        $("#name").on("blur", validateName);
+        $(".submitBtn").on("click", validateForm);
+    }
+
+
+
+    function validatePhone() {
+        var isValid = false;
+        var length = $("#phone2").val().length;
+        if (length == 18) {
+            $(".phoneValidationImg").html( '').parent().parent().removeClass('er');
+            $("#phone2").removeClass("invalid");
+            isValid  = true;
+        } else {
+            $(".phoneValidationImg").html('Телефон введен неверно').parent().parent().addClass('er');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function validateName() {
+        var isValid = false;
+        var length = $("#name").val().length;
+        if (length > 1) {
+            $(".nameValidationImg").html( '').parent().parent().removeClass('er');
+            $("#name").removeClass("invalid");
+            isValid  = true;
+        } else {
+            $(".nameValidationImg").html('Имя не заполнено').parent().parent().addClass('er');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function validateForm() {
+        var formIsValid = true;
+
+        if (!validatePhone()) {
+            $("#phone2").addClass("invalid");
+            formIsValid = false;
+        } else {
+            $("#phone2").removeClass("invalid");
+        }
+
+
+        if (!validateName()) {
+            $("#name").addClass("invalid");
+            formIsValid = false;
+        } else {
+            $("#name").removeClass("invalid");
+        }
+    }
+
     /*$('.js-catalog-item-slider').slick({
         infinite: true,
         arrows: false,
@@ -86,6 +158,31 @@ $(document).ready(function (){
                 }
             }
         ]
+    });
+
+    $('.js-ab-main-slider, .js-all-main-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+        centerMode: true,
+        variableWidth: true,
+        infinite: true,
+        focusOnSelect: true,
+        cssEase: 'linear',
+        touchMove: true,
+    });
+
+    var imgs = $('.js-ab-main-slider img, .js-all-main-slider img');
+    imgs.each(function(){
+        var item = $(this).closest('.item');
+        item.css({
+            'background-image': 'url(' + $(this).attr('src') + ')',
+            'background-position': 'center',
+            '-webkit-background-size': 'cover',
+            'background-size': 'cover',
+        });
+        $(this).hide();
     });
 
 
