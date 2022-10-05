@@ -2804,6 +2804,7 @@ h1 {
 }
 
 .button-main {
+  display: inline-flex;
   height: 82px;
   padding: 27px 60px;
 
@@ -2813,6 +2814,10 @@ h1 {
   color: $white!important;
   background: linear-gradient(90deg, #F9B9A6 4.12%, #CE9181 97.25%);
   border-radius: 70px;
+
+  span {
+    padding-left: 5px;
+  }
 
   &:hover {
     background: linear-gradient(90deg, #CE9181 4.12%, #F9B9A6 97.25%);
@@ -2824,6 +2829,10 @@ h1 {
 
     font-size: 14px;
     line-height: 140%;
+
+    span {
+      display: inline-block;
+    }
   }
 }
 
@@ -2964,11 +2973,13 @@ h1 {
 
         border-radius: 20px;
         overflow: hidden;
+
+        .button {
+          padding: 14px;
+        }
       }
 
-      @media screen and(max-width: 768px) {
-        padding: 36px 23px 50px;
-      }
+
 
       p {
         margin-top: 50px;
@@ -4082,6 +4093,29 @@ h1 {
   }
 }
 
+.modal-tw {
+  &.modal-n {
+    .modal-body {
+      @media screen and(max-width: 991px) {
+        padding: 18px 10px 20px !important;
+
+        .form-group {
+          margin: 5px 0 0!important;
+        }
+
+        .modal-f {
+          padding: 0 20px;
+        }
+
+        .fr .text-center.my-4 input {
+          font-size: 14px;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+}
+
 .modal-n {
   .close {
     margin-top: 0;
@@ -4100,12 +4134,10 @@ h1 {
   .modal-dialog {
     max-width: 523px;
 
-    @media screen and(min-width: 991px) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
   }
 
   .modal-content {
@@ -4114,6 +4146,7 @@ h1 {
 
   .modal-body {
     padding: 30px 40px 40px!important;
+
   }
 
   &-title {
@@ -4139,7 +4172,7 @@ h1 {
 
     &-n {
       @media screen and(max-width: 991px) {
-        margin-bottom: 10px;
+        margin-bottom: 18px;
 
         font-size: 12px;
         line-height: 140%;
@@ -4430,6 +4463,400 @@ h1 {
     font-size: 12px;
     line-height: 16px;
     color: red;
+  }
+}
+
+.cont {
+  .header .container,
+  .footer .container {
+    max-width: 1500px;
+  }
+}
+
+.page-tx {
+  margin-top: 105px;
+  padding-bottom: 30px;
+
+  font-family: $font-family2;
+
+  @media screen and(max-width: 991px) {
+    margin-top: 20px;
+  }
+
+  &__inner {
+
+  }
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  &__ot {
+    margin-top: 70px;
+
+    &-title {
+      margin-bottom: 35px;
+
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 140%;
+      color: $black;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px -40px;
+
+      &-item {
+        margin-bottom: 40px;
+        display: flex;
+        width: 33.333%;
+        padding: 0 10px;
+
+        box-sizing: border-box;
+
+        @media screen and(max-width: 991px) {
+          width: 50%;
+        }
+
+        @media screen and(max-width: 768px) {
+          width: 100%;
+        }
+      }
+
+      &-img {
+        width: 102px;
+        height: 75px;
+
+        border-radius: 11px;
+        overflow: hidden;
+      }
+
+      &-tx {
+        width: calc(100% - 102px);
+        padding-left: 23px;
+
+        box-sizing: border-box;
+      }
+
+      &-data {
+        margin-bottom: 5px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: $gray3;
+      }
+
+      &-title {
+        display: block;
+
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 140%;
+        color: $black;
+      }
+    }
+  }
+
+  &__data {
+    margin-right: 55px;
+    display: inline-block;
+    vertical-align: top;
+
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+    color: $gray3;
+    font-family: $font-family2;
+
+    @media screen and(max-width: 991px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__tm {
+    display: inline-block;
+    vertical-align: top;
+
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 140%;
+    color: $gray3;
+    font-family: $font-family2;
+
+    @media screen and(max-width: 991px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__share {
+    margin-bottom: 37px;
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 140%;
+    color: $gray3;
+
+    img {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      color: $black;
+    }
+
+    @media screen and(max-width: 991px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: flex-end;
+    margin-right: -53%;
+    margin-bottom: 40px;
+
+    @media screen and(max-width: 1530px) {
+      margin-right: -40%;
+    }
+
+    @media screen and(max-width: 1400px) {
+      margin-right: 0;
+    }
+
+    @media screen and(max-width: 991px) {
+      display: block;
+    }
+
+    &-i {
+      width: 75%;
+
+      border-radius: 8px;
+      overflow: hidden;
+
+      @media screen and(max-width: 991px) {
+        width: 100%;
+      }
+    }
+
+    &-tx {
+      width: 25%;
+      padding-left: 10px;
+      box-sizing: border-box;
+
+      font-size: 20px;
+      line-height: 140%;
+      color: #A4A4A4;
+
+      @media screen and(max-width: 991px) {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__list {
+    margin-bottom: 40px;
+    margin-right: -53%;
+
+    @media screen and(max-width: 1530px) {
+      margin-right: -40%;
+    }
+
+    @media screen and(max-width: 1400px) {
+      margin-right: 0;
+    }
+
+    &-tx {
+      font-size: 20px;
+      line-height: 140%;
+      color: #A4A4A4;
+
+
+      @media screen and(max-width: 991px) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &-inner {
+      margin: 0 -10px;
+      flex-wrap: wrap;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &-item {
+      width: 33.333%;
+      padding: 0 10px;
+      margin-bottom: 20px;
+
+      @media screen and(max-width: 991px) {
+        width: 50%;
+      }
+
+      @media screen and(max-width: 768px) {
+        width: 100%;
+      }
+
+      &-in {
+        height: 467px;
+        border-radius: 8px;
+        overflow: hidden;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @media screen and(max-width: 991px) {
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-width: 955px;
+    margin-bottom: -30px;
+
+    @media screen and(max-width: 1400px) {
+      max-width: 100%;
+    }
+
+    h1 {
+      margin-bottom: 45px;
+
+      font-size: 64px;
+      line-height: 140%;
+      color: $black;
+
+      @media screen and(max-width: 991px) {
+        font-size: 35px;
+        line-height: 45px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 45px;
+
+      font-size: 40px;
+      line-height: 140%;
+      font-weight: 700;
+      color: $black;
+
+      @media screen and(max-width: 991px) {
+        margin-bottom: 20px;
+
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+
+      font-size: 20px;
+      line-height: 140%;
+      color: $black;
+
+      @media screen and(max-width: 991px) {
+        margin-bottom: 15px;
+
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    ol {
+      margin-bottom: 30px;
+      padding-left: 20px;
+
+      @media screen and(max-width: 991px) {
+        margin-bottom: 15px;
+      }
+
+      li {
+        font-size: 20px;
+        line-height: 140%;
+        color: $black;
+        list-style: auto;
+
+        @media screen and(max-width: 991px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    ul {
+      margin-bottom: 30px;
+
+      @media screen and(max-width: 991px) {
+        margin-bottom: 15px;
+      }
+
+
+      li {
+        padding-left: 35px;
+
+        position: relative;
+
+        font-size: 20px;
+        line-height: 140%;
+        color: $black;
+
+        @media screen and(max-width: 991px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        &:before {
+          content: '';
+          width: 4px;
+          height: 4px;
+          display: block;
+
+          position: absolute;
+          top: 8px;
+          left: 16px;
+          z-index: 2;
+
+          background: $black;
+          border-radius: 100px;
+        }
+      }
+    }
+
+    blockquote {
+      margin-bottom: 40px;
+      padding: 65px;
+
+      font-style: italic;
+      font-size: 28px;
+      line-height: 140%;
+      color: $black;
+
+      background: rgba(248, 184, 165, 0.32);
+      border-radius: 23px;
+      
+
+      @media screen and(max-width: 991px) {
+        padding: 30px;
+
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
   }
 }
 

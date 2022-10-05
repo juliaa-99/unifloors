@@ -67,7 +67,7 @@ $(document).ready(function (){
         return isValid;
     }
 
-    function validateName() {
+    /*function validateName() {
         var isValid = false;
         var length = $("#name").val().length;
         if (length > 1) {
@@ -80,6 +80,37 @@ $(document).ready(function (){
         }
 
         return isValid;
+    }*/
+
+
+    function validateName() {
+        var emailAddress = $("#name").val();
+        var pattern = new RegExp(
+            /[A-Za-z]/
+        );
+        var validEmail = pattern.test(emailAddress);
+        var reason = "";
+        if (!validEmail) {
+            reason = "Improper format";
+        } else {
+            if (emailAddress.includes("@hotmail")) {
+                validEmail = false;
+                reason = "Hotmail not accepted";
+            } else if (emailAddress.includes("@gmail")) {
+                validEmail = false;
+                reason = "Gmail not accepted";
+            } else if (emailAddress.includes("@yahoo")) {
+                validEmail = false;
+                reason = "Yahoo not accepted";
+            }
+        }
+        if (validEmail) {
+            $(".nameValidationImg").html( '').parent().parent().removeClass('er');
+            $("#name").removeClass("invalid");
+        } else {
+            $(".nameValidationImg").html('Имя не заполнено').parent().parent().addClass('er');
+        }
+        return validEmail;
     }
 
     function validateForm() {
